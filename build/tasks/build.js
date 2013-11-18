@@ -26,7 +26,7 @@ module.exports = function( grunt ) {
 				endFile: "src/outro.js"
 			},
 			paths: {
-				sizzle: "../bower_components/sizzle/dist/sizzle"
+				sizzle: "../bower_modules/sizzle/dist/sizzle"
 			},
 			rawText: {},
 			onBuildWrite: convert
@@ -256,6 +256,6 @@ module.exports = function( grunt ) {
 
 		grunt.log.writeln( "Creating custom build...\n" );
 
-		grunt.task.run([ "build:*:*:" + modules, "pre-uglify", "uglify", "dist" ]);
+		grunt.task.run([ "build:*:*:" + modules, "uglify", "dist" ]);
 	});
 };
